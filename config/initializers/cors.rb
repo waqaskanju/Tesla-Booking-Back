@@ -3,7 +3,7 @@ Rails.application.config.middleware.insert_before 0, Rack::Cors do
     origins 'https://w-tesla-front.herokuapp.com'
     resource '*',
              headers: :any,
-             methods: %i[get post put patch delete options head],
+             methods: [:get, :post, :put, :patch, :delete, :options, :head],
              credentials: true
   end
 
